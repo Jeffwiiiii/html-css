@@ -6,8 +6,9 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
@@ -24,7 +25,7 @@
 
     <main>
         <article>
-            <h2>Testando Media Queries</h2>
+            <h2>Testando Media Queries</h2><br>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, hic eum odit, perspiciatis voluptatem nostrum architecto cum blanditiis adipisci voluptas perferendis molestiae fugit commodi tenetur nulla aliquam, deserunt facilis dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus similique soluta vitae delectus voluptas inventore tempore? Blanditiis vero exercitationem quam, facilis voluptatum, at, facere quidem corporis amet consequuntur ab voluptates. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati, consequatur officiis unde ipsam animi repellat iure. Ea ab, at vitae obcaecati praesentium similique. Itaque, ex dolore. Expedita illo delectus culpa!</p>
 
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eius numquam explicabo quas a deleniti reiciendis, repellendus doloribus facilis inventore consectetur mollitia sunt animi odit perspiciatis in libero minus? Nam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatibus laborum, voluptatum expedita, repellendus quo sed doloribus amet a corporis ipsam nisi doloremque optio est illum, harum ab. Eligendi, commodi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique id reprehenderit, quae necessitatibus accusamus ipsum voluptatum vitae saepe odio animi. Nobis tempore totam quidem impedit dicta obcaecati aspernatur laboriosam quae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi eius, exercitationem illo rem illum eos ut repellendus necessitatibus iure modi, temporibus, laboriosam ullam labore quas. Laborum libero excepturi voluptatibus provident!</p>
@@ -33,11 +34,20 @@
         </article>
     </main>
     <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (itens.style.display == 'block') {
                 itens.style.display = 'none'
             } else {
-                itens.style.display = "block"
+                itens.style.display = 'block'
             }
         }
     </script>
